@@ -187,7 +187,7 @@ backToTopBtn.addEventListener('click', function () {
   });
 });
 // Fetch and display user information from JSON file
-fetch('/json/users.json')
+fetch('../json/users.json')
   .then(response => response.json())
   .then(data => {
     const userList = document.querySelector('.users-not-fr');
@@ -211,7 +211,7 @@ fetch('/json/users.json')
     });
   })
   .catch(error => console.error('Error fetching user data:', error));
-  fetch('/json/users-chat.json')
+  fetch('../json/users-chat.json')
   .then(response => response.json())
   .then(data => {
     const userList = document.querySelector('.users-chat');
@@ -244,7 +244,7 @@ function viewprofile() {
     menu.style.display = 'block';
   }
 }
-fetch('/json/user-contact.json')
+fetch('../json/user-contact.json')
   .then(response => response.json())
   .then(data => {
     const userList = document.querySelector('.users');
@@ -263,7 +263,7 @@ fetch('/json/user-contact.json')
     });
   })
   .catch(error => console.error('Error fetching user data:', error));
-fetch('/json/nofication.json')
+fetch('../json/nofication.json')
   .then(response => response.json())
   .then(data => {
     const notifList = document.querySelector(".list-nof");
@@ -288,7 +288,7 @@ fetch('/json/nofication.json')
     })
   })
   .catch(error => console.error('Error fetching user data:', error));
-fetch('/json/acceptfr.json')
+fetch('../json/acceptfr.json')
   .then(response => response.json())
   .then(data => {
     const userList = document.querySelector('.sub-nof');
