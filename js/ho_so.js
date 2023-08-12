@@ -7,7 +7,7 @@ function loadDanhSachSV() {
         for (let p of data) {
             h += `
             <div class="SinhVien" id="SinhVien">
-                <img src="/image/${p.profileImage}" alt="Sinh Vien">
+                <img src="../image/${p.profileImage}" alt="Sinh Vien">
                 <h4>Họ Tên: <span id="hoTen">${p.hoTen}</span></h4>
                 <h5>Khoa: <span id="khoa">${p.khoa}</span></h5>
                 <h5>Mã Lớp: <span id="lop">${p.lop}</span></h5>
