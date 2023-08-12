@@ -1,5 +1,5 @@
 function loadDanhSachSV() {
-    fetch('/json/ho_so_SV.json').then(res => res.json()).then(data => {
+    fetch('../json/ho_so_SV.json').then(res => res.json()).then(data => {
         let h = "";
         let l = "";
         let them = false;
