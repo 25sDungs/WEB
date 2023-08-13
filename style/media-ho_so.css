@@ -3,6 +3,7 @@
         display: flex;
         width: 100%;
     }
+
     #timSinhVien {
         margin: .3rem;
         font-size: 1.2rem;
@@ -10,8 +11,13 @@
         text-align: center;
         height: 1.5rem;
     }
+
     .info {
         width: 45%;
+    }
+
+    .display-none {
+        display: none;
     }
 
     .image {
@@ -34,10 +40,12 @@
     .aside-left {
         width: 0%;
     }
-    #backToTopBtn:hover{
+
+    #backToTopBtn:hover {
         opacity: 1;
     }
-    #backToTopBtn{
+
+    #backToTopBtn {
         position: fixed;
         bottom: 20px;
         right: 65px;
