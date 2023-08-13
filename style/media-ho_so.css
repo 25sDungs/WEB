@@ -1,0 +1,53 @@
+@media (max-width: 420px) {
+    .SinhVien {
+        display: flex;
+        width: 100%;
+    }
+    #timSinhVien {
+        margin: .3rem;
+        font-size: 1.2rem;
+        width: 80%;
+        text-align: center;
+        height: 1.5rem;
+    }
+    .info {
+        width: 45%;
+    }
+
+    .image {
+        width: 45%;
+    }
+
+    .image img {
+        width: 100%;
+    }
+
+    .DanhSachSinhVien {
+        width: 100%;
+        display: block;
+    }
+
+    .aside-right {
+        width: 0%;
+    }
+
+    .aside-left {
+        width: 0%;
+    }
+    #backToTopBtn:hover{
+        opacity: 1;
+    }
+    #backToTopBtn{
+        position: fixed;
+        bottom: 20px;
+        right: 65px;
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+}
