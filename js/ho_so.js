@@ -32,12 +32,12 @@ function loadDanhSachSV() {
         let e = document.getElementById("DanhSachSinhVien");
         if (e !== null)
             e.innerHTML += h;
-        $("#submenu-hoso li>a").click(function(){
-            let find=$(this).attr("href");
-            find=find.replace(/[_]/g, ' ');
-            find=find.replace('#', '');
+        $("#submenu-hoso li>a").click(function () {
+            let find = $(this).attr("href");
+            find = find.replace(/[_]/g, ' ');
+            find = find.replace('#', '');
             $("#timSinhVien").val(`${find}`);
-            let a=$("#timSinhVien").val();
+            let a = $("#timSinhVien").val();
             if (a !== "") {
                 $("#DanhSachSinhVien>div").addClass("display-none");
                 let tim, khoa;
@@ -45,7 +45,7 @@ function loadDanhSachSV() {
                 for (let i = 0; i < $("#DanhSachSinhVien>div").length; i++) {
                     tim = $(".SinhVien").eq(i);
                     khoa = tim.find("#khoa").text();
-                    if (khoa.slice(0, lengthOfA) == a)
+                    if (khoa.indexOf(a) >= 0)
                         $(".SinhVien").eq(i).removeClass("display-none");
                 }
             }
@@ -71,13 +71,13 @@ $(document).ready(() => {
                 khoa = tim.find("#khoa").text();
                 lop = tim.find("#lop").text();
                 mssv = tim.find("#mssv").text();
-                if (hoTen.slice(0, lengthOfA).toUpperCase() == a.toUpperCase())
+                if (hoTen.toUpperCase().indexOf(a.toUpperCase()) >= 0)
                     $(".SinhVien").eq(i).removeClass("display-none");
-                else if (khoa.slice(0, lengthOfA).toUpperCase() == a.toUpperCase())
+                else if (khoa.toUpperCase().indexOf(a.toUpperCase()) >= 0)
                     $(".SinhVien").eq(i).removeClass("display-none");
-                else if (lop.slice(0, lengthOfA).toUpperCase() == a.toUpperCase())
+                else if (lop.toUpperCase().indexOf(a.toUpperCase()) >= 0)
                     $(".SinhVien").eq(i).removeClass("display-none");
-                else if (mssv.slice(0, lengthOfA).toUpperCase() == a.toUpperCase())
+                else if (mssv.indexOf(a) >= 0)
                     $(".SinhVien").eq(i).removeClass("display-none");
             }
         }
