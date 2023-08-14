@@ -9,7 +9,6 @@
         padding: 1rem;
         width: 90%;
     }
-    
     .search {
         padding: 0 1rem 1rem 1rem;
         width: 60%;
@@ -136,7 +135,7 @@
 
     .logofoot img {
         width: 100%;
-        height: 100%;
+        height: 100%px;
     }
 
     .logofoot {
