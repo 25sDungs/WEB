@@ -82,6 +82,15 @@ div.SinhVien img {
         width: 100%;
     }
 
+    ul.menu.right {
+        display: none;
+    }
+
+    nav {
+        margin: 0;
+        padding: 0;
+    }
+
     .display-none {
         display: none;
     }
@@ -130,6 +139,29 @@ div.SinhVien img {
     }
 
     .maps {
-        width: 100%;
+        width: 95%;
     }
+}
+
+
+@media (max-width: 280px) {
+    * {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (min-width: 451px) and (max-width: 950px) {
+
+    .nav {
+        padding: 1rem;
+    }
+
+    ul.menu.right {
+        display: none;
+    }
+
+    ul.menu.left {
+        justify-content: space-between;
+    }
+
 }
