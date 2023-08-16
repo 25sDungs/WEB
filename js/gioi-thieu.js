@@ -17,6 +17,12 @@ document.getElementById('backToTopBtn').addEventListener('click', function () {
     behavior: 'smooth' // Cuộn mượt đến đầu trang
   });
 });
+document.getElementById('aboutUs').addEventListener('click', function () {
+  window.scrollTo({
+    top: 99999999,
+    behavior: 'smooth'
+  });
+});
 $(window).scroll(function () {
   let scrollTop = $(window).scrollTop();
   if (scrollTop > 160) {

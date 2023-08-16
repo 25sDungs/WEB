@@ -37,6 +37,13 @@ document.getElementById('backToTopBtn').addEventListener('click', function () {
     behavior: 'smooth' // Cuộn mượt đến đầu trang
   });
 });
+//xuống about us
+document.getElementById('aboutUs').addEventListener('click', function () {
+  window.scrollTo({
+    top: 99999999,
+    behavior: 'smooth'
+  });
+});
 function buttonPress() {
   // Các xử lý khác mà bạn muốn thực hiện khi nút được nhấn có thể được thêm ở đây
 

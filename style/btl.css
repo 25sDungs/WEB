@@ -3,7 +3,7 @@
 .head {
   display: flex;
   background-color: #1d559f;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -68,7 +68,7 @@
   transition: 0.4s;
 }
 
-.logo> img {
+.logo>img {
   width: 100%;
   height: 100%;
 }
@@ -76,6 +76,7 @@
 .bg {
   margin-bottom: 0;
 }
+
 button {
   cursor: pointer;
 }
@@ -83,8 +84,9 @@ button {
 button:active {
   transform: translateY(4px);
 }
+
 .right {
-  background: linear-gradient( to right, #1d559f,lightblue )
+  background: linear-gradient(to right, #1d559f, lightblue)
 }
 
 :root {
@@ -102,6 +104,7 @@ button:active {
   --paragraph: 1.1rem;
   --font-main: "Poppins";
 }
+
 html,
 body {
   margin: 0;
@@ -114,7 +117,7 @@ main {
   align-items: center;
 }
 
-.title> h2 {
+.title>h2 {
   margin: 0;
   width: 60%;
   font-weight: 800;
@@ -122,7 +125,8 @@ main {
   text-transform: uppercase;
   color: white;
 }
-.title> p {
+
+.title>p {
   margin: 0;
   width: 60%;
   font-weight: 300;
@@ -149,6 +153,7 @@ main {
   background-color: rgba(0, 0, 0, .5);
   z-index: 4;
 }
+
 /* Slider */
 .wrapper {
   width: 100%;
@@ -173,6 +178,7 @@ main {
   height: 100%;
   object-fit: cover;
 }
+
 /* Navigation Dots */
 .navigation-dots {
   left: 50%;
@@ -199,6 +205,7 @@ main {
 .single-dot.active {
   background: white;
 }
+
 #backToTopBtn {
   position: fixed;
   bottom: 20px;
@@ -223,10 +230,12 @@ main {
   opacity: 0.3;
   transform: scale(1.1);
 }
-.right a:hover{
+
+.right a:hover {
   border-radius: 15px;
 }
-.fixed{
+
+.fixed {
   position: fixed;
   margin: 0;
   top: 0;
@@ -234,65 +243,96 @@ main {
   right: 0;
   z-index: 99;
 }
+
 .end {
   color: #ffffff;
   margin-top: 0.1rem;
   background-color: #1d559f;
 }
-.row{
+
+.row {
   display: flex;
   justify-content: space-evenly;
   padding-bottom: 3rem;
 }
-.detail{
+
+.detail {
   width: 50%;
   margin-top: 3rem;
   border-bottom: white solid 1px;
   padding-bottom: 2rem;
 }
-.logofoot{
+
+.logofoot {
   padding-top: 3rem;
   padding-bottom: 3rem;
   border-bottom: white solid 1px;
 }
-p>a{
+
+p>a {
   text-decoration: none;
   color: #efa36e
 }
-.iconcontact{
+
+.iconcontact {
   display: flex;
   margin-left: 4rem;
 }
-.iconcontact>a{
+
+.iconcontact>a {
   margin-right: 2rem;
 }
-.maps{
+
+.maps {
   display: flex;
   flex-direction: column;
   align-content: space-between;
   width: 50%;
 }
-.map>a{
+
+.map>a {
   text-decoration: none;
   color: white;
 }
-.map{
+
+.map {
   margin-bottom: 1rem;
 }
-.map>a:hover{
-  color:#efa36e;
+
+.map>a:hover {
+  color: #efa36e;
 }
-.map>a >.submap{
+
+.map>a>.submap {
   display: none;
 }
-.map>a:hover>.submap{
+
+.map>a:hover>.submap {
   position: absolute;
   display: block;
 }
-ul>li{
-  list-style:none;
+
+ul>li {
+  list-style: none;
 }
-iframe{
+
+iframe {
   width: 500px;
   height: 200px;
+}
+
+
+#aboutUsip {
+  padding: 0;
+  color: white;
+  text-decoration: none;
+  border: none;
+  background-color: #1d559f;
+  font-size: 1rem;
+  font-family: 'Nunito';
+}
+
+.menu>li>a:hover>#aboutUsip {
+  background-color: darkblue;
+  transition: 0.4s;
 }
