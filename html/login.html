@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../style/media-login.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
-
+ 
 <body>
   <header>
     <div class="head">
@@ -27,7 +27,6 @@
     <ul class="menu left">
       <li><a href="../index.html"><i class="fas fa-home"></i> Trang chủ</a></li>
       <li><a href="../html/gioi-thieu.html"><i class="fas fa-info-circle"></i> Giới thiệu</a></li>
-      <li><a href="../html/newsfeed.html"><i class="fas fa-newspaper"></i> Bài viết</a></li>
       <li><a href="../html/ho_so.html"><i class="fas fa-search-plus"></i> Tìm hồ sơ cựu sinh viên</a></li>
     </ul>
   </nav>
@@ -35,7 +34,7 @@
     <div class="form">
       <div class="container" id="container">
         <div class="form-container sign-up-container">
-          <form action="#">
+          <form id="register-form">
             <h2 class="create">Tạo tài khoản</h2>
             <div class="social-container">
               <a href="https://www.facebook.com/" class="social"><i class="fa-brands fa-facebook fa-2x"></i></a>
@@ -45,14 +44,14 @@
                   style="color: #126bc4;"></i></a>
             </div>
             <span>hoặc sử dụng tài khoản của bạn</span>
-            <input class="enter" type="text" placeholder="Tên đăng nhập" />
-            <input class="enter" type="email" placeholder="Email" />
-            <input class="enter" type="password" placeholder="Mật khẩu" />
-            <button class="sign">Đăng ký</button>
+            <input type="text" id="reg-username" placeholder="Tên đăng nhập" class="enter" required>
+            <input type="email" placeholder="Email" class="enter">
+            <input type="password" id="reg-password" placeholder="Mật khẩu" class="enter"required>
+            <button type="submit" class="sign">Đăng ký</button>
           </form>
         </div>
         <div class="form-container sign-in-container">
-          <form action="#">
+          <form id="login-form">
             <h2 class="create">Đăng nhập</h2>
             <div class="social-container">
               <a href="https://www.facebook.com/" class="social"><i class="fa-brands fa-facebook fa-2x"></i></a>
@@ -62,10 +61,10 @@
                   style="color: #126bc4;"></i></a>
             </div>
             <span>hoặc sử dụng tài khoản của bạn</span>
-            <input class="enter" type="text" placeholder="Tên đăng nhập" />
-            <input class="enter" type="password" placeholder="Mật khẩu" />
+            <input class="enter" type="text" id="login-username" placeholder="Tên đăng nhập" required>
+            <input class="enter" type="password" id="login-password" placeholder="Mật khẩu" required>
             <a class="forgot" href="#">Quên mật khẩu?</a>
-            <button class="sign">Đăng nhập</button>
+            <button type="submit" class="sign">Đăng nhập</button>
           </form>
         </div>
         <div class="overlay-container">
@@ -212,6 +211,7 @@
     <button id="backToTopBtn"><i class="fa-solid fa-arrow-up"></i></button>
   </footer>
   <script src="../js/login.js"></script>
+  <script src="../js/reg-log.js"></script>
 </body>
 
 </html>

@@ -200,7 +200,6 @@ header {
 
 .border {
     display: flex;
-    padding-left: .8rem;
     align-items: center;
     height: 70px;
     width: 300px;
@@ -1013,17 +1012,17 @@ button:active {
 .content-nof p {
     margin: 0;
 }
-
 .content-nof,
 .user-top {
     display: flex;
-    align-items: center;
     gap: 1rem;
     padding: 0.5rem 1rem 0.5rem 1rem;
     border-radius: 15px;
     cursor: pointer;
 }
-
+.content-nof b, .user-chat b, .user-top b, .user-left b, .name h2, .user b{
+    font-weight: 900;
+}
 .content-nof:hover,
 .user-top:hover {
     background-color: #f0f2f5;
@@ -1701,7 +1700,7 @@ button:active {
 }
 .addmore {
     width: 95%;
-    left: 1rem;
+    left: .5rem;
     bottom: .7rem;
     position: absolute;
     display: flex;

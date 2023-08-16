@@ -14,12 +14,14 @@
         width: 60%;
     }
 
-    .lul {
+    .ul {
         width: 100%;
     }
-
     .right a {
-        font-size: small;
+        font-size: 11px;
+        text-align: center;
+        width: 80px;
+        height: 1rem;
         border-radius: 15px;
         background: linear-gradient(to right bottom, aqua, blue) !important;
     }
@@ -167,7 +169,6 @@
     }
 
     .nav {
-        background-color: lightseagreen;
         display: flex;
     }
 
