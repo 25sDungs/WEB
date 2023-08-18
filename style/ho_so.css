@@ -69,6 +69,8 @@ div.SinhVien img {
 }
 
 #timSinhVien {
+    border-radius: 15px;
+    border: 2px solid red;
     margin: .3rem;
     font-size: 1.2rem;
     width: 50%;
@@ -148,12 +150,10 @@ div.SinhVien img {
 
 @media only screen and (min-width: 451px) and (max-width: 950px) {
 
-    .nav {
-        padding: 1rem;
-    }
-
-    ul.menu.right {
-        display: none;
+    .right {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to right, #1d559f, #4478b2);
     }
 
     ul.menu.left {

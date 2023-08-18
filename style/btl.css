@@ -86,7 +86,7 @@ button:active {
 }
 
 .right {
-  background: linear-gradient(to right, #1d559f, lightblue)
+  background: linear-gradient(to right, #1d559f, #4478b2);
 }
 
 :root {
@@ -322,7 +322,7 @@ iframe {
 }
 
 
-#aboutUsip {
+#aboutUsId {
   padding: 0;
   color: white;
   text-decoration: none;
@@ -332,7 +332,7 @@ iframe {
   font-family: 'Nunito';
 }
 
-.menu>li>a:hover>#aboutUsip {
+.menu>li>a:hover>#aboutUsId {
   background-color: darkblue;
   transition: 0.4s;
 }

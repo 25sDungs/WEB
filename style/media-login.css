@@ -205,4 +205,15 @@
     .form {
         width: 95%;
     }
+    .menu{
+        display: flex;
+        justify-content: space-between;
+    }
+    .menu>li{
+        width: auto;
+        height: auto;
+    }
+    * {
+        font-size: 0.8rem !important;
+    }
 }
