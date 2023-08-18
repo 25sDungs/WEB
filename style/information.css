@@ -9,16 +9,51 @@ footer{
     width: 100%;
 }
 .bg{
-    box-shadow: 0px 16px 16px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 16px 16px 0px rgba(0, 0, 0, 0.2);
     width: 1000px;
     height: 400px;
 }
 .bg-theme{
-    box-shadow: 0px 16px 16px 16px black;
+    box-shadow: 0px 16px 16px 0px black !important;
 }
 .bg>img{
     width: 100%;
     height: 100%;
+}
+.strs-me{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.strs-name{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.strs-name>.str-name{
+    text-align: center;
+}
+.str-me{
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 16px 16px 0px rgba(0, 0, 0, 0.2);
+    width: 23%;
+}
+.str-name{
+    border-radius: 15px;
+    width: 23%;
+}
+.str-me>img{
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+    border-radius: 15px;
+}
+.str-me>img:hover{
+   cursor: pointer;
+   filter: brightness(0.5);
+   transform: scale(1.1);
+   transition: .3s;
 }
 .name-info{
     display: flex;
@@ -42,12 +77,13 @@ footer{
     display: flex;
     gap: 1rem;
     align-items: flex-end;
-    top: 350px;
+    top: 360px;
 }
 .img-avt>img{
     width: 100%;
     height: 100%;
     border-radius: 50%;
+    box-shadow: 0px 16px 16px 0px rgba(0, 0, 0, 0.2);
 }
 li>a{
     border-radius: 15px;
@@ -98,12 +134,90 @@ ul{
     margin: 0;
     gap: 1rem;
 }
-.focus-inf{
-    position: absolute;
+.focus-left{
     border-radius: 15px;
-    top: 680px;
-    left: 155px;
-    width: 35%;
-    height: 500px;
+    width: 45%;
+    height: 380px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+} 
+.focus-inf{
+    border-radius: 15px;
+    width: 32%;
+    height: 520px;
     background-color: white;
 } 
+.imgs-mini {
+    display: flex;
+}
+.add-tieusu{
+    margin: 0;
+    padding: 1rem 1rem 0 1rem;
+    display: flex;
+    justify-content: center;
+}
+.add-tieusu button{
+    width: 90%;
+    height: 40px;
+    font-weight: 700;
+    border-radius: 15px;
+    background-color: grey;
+    color: white;
+    border: none;
+}
+.img-mini {
+    width: 35px;
+    height: 35px;
+    position: relative; /* Để tạo cơ sở cho vị trí tương đối của ảnh */
+}
+.img-mini>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.img-overlay {
+    margin-left: -5px;
+    z-index: 1;
+}
+.tieusu{
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem 1rem 1rem;
+}
+.jobs{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 1rem 0 1rem;
+}
+.tieusu>h2{
+    width: 90%;
+    font-weight: 900;
+    margin: 0;
+}
+.thongtin{
+    align-items: flex-start;
+    position: absolute;
+    top: 680px;
+    left: 155px;
+    gap: 30px;
+    width: 100%;
+}
+.job a i{
+    font-size: 23px;
+}
+.job a{
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    font-size: 1rem;
+}
+.job{
+    padding: 1rem 1rem 0 1rem;
+    gap : .5rem;
+}
+.jobs>div{
+    width: 90%;
+}

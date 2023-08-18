@@ -75,8 +75,31 @@ window.onload = function () {
         $(".menu-nof").fadeOut('fast');
       }
     });
+    function scrollToBottom() {
+      const centerBox = $('.center-box');
+      centerBox.scrollTop(centerBox[0].scrollHeight);
+      
+    }
     $(".mess").click(() => {
-      $(".sub-chat").fadeIn('fast');
+      $(".sub-chat").fadeIn('fast'); // Hiển thị phần tử .sub-chat với hiệu ứng fadeIn khi tài liệu đã sẵn sàng
+      $(".mess").click(() => {
+        $("#text-enter").focus(); // Đặt con trỏ vào vùng nhập liệu
+      });
+      $('#text-enter').keypress((event) => {
+        if (event.which === 13) { // Mã ASCII của phím Enter
+          event.preventDefault(); // Ngăn việc thực hiện hành động mặc định của Enter (thường là gửi biểu mẫu)
+          const text = $("#text-enter").val().trim(); // Lấy nội dung và loại bỏ khoảng trắng đầu và cuối
+          if (text !== '') {
+            const yourTextContainer = $('.your-text').last();
+            const newMessage = document.createElement('div');
+            newMessage.innerHTML = `<p>${text}</p>`;
+            yourTextContainer.append(newMessage);
+            $("#text-enter").val(''); // Xóa nội dung của vùng nhập liệu
+            $("#text-enter").focus();
+            scrollToBottom();
+          }
+        }
+      });
     })
     // Sự kiện click bên ngoài "menu-nof"
     $(document).click((event) => {
@@ -100,21 +123,21 @@ window.onload = function () {
         $(".theme").fadeOut('fast');
       }
     });
-    $(document).ready(function() {
+    $(document).ready(function () {
       checkFooterVisibility(); // Kiểm tra lần đầu khi tải trang
-      
-      $(window).on('resize', function() {
-          checkFooterVisibility(); // Kiểm tra lại khi cửa sổ được thay đổi kích thước
+
+      $(window).on('resize', function () {
+        checkFooterVisibility(); // Kiểm tra lại khi cửa sổ được thay đổi kích thước
       });
-      
+
       function checkFooterVisibility() {
-          if (window.innerWidth < 1000) {
-              $('footer').hide(); // Sử dụng hàm hide() để ẩn footer
-          } else {
-              $('footer').show(); // Sử dụng hàm show() để hiển thị footer
-          }
+        if (window.innerWidth < 1000) {
+          $('footer').hide(); // Sử dụng hàm hide() để ẩn footer
+        } else {
+          $('footer').show(); // Sử dụng hàm show() để hiển thị footer
+        }
       }
-  });
+    });
     $('#theme-toggle').change(() => {
       if ($('#theme-toggle').prop('checked')) {
         $('.content, .news, .create, .users-not-fr,.menuflex,.see-all, .users, .left, .mid, .right, .comment, .img16-9-content, .img4-3-content, .img-square-content , .img-more-content').addClass('border-theme');
@@ -214,7 +237,7 @@ window.onload = function () {
       overlay.classList.remove('active');
     }, 800);
   });
-};
+}
 let scrollmid = document.querySelector('.secmid');
 let backToTopBtn = document.getElementById('backToTopBtn');
 window.addEventListener('scroll', function () {

@@ -75,8 +75,30 @@ window.onload = function () {
         $(".menu-nof").fadeOut('fast');
       }
     });
+    function scrollToBottom() {
+      const centerBox = $('.center-box');
+      centerBox.scrollTop(centerBox[0].scrollHeight);
+    }
     $(".mess").click(() => {
-      $(".sub-chat").fadeIn('fast');
+      $(".sub-chat").fadeIn('fast'); // Hiển thị phần tử .sub-chat với hiệu ứng fadeIn khi tài liệu đã sẵn sàng
+      $(".mess").click(() => {
+        $("#text-enter").focus(); // Đặt con trỏ vào vùng nhập liệu
+      });
+      $('#text-enter').keypress((event) => {
+        if (event.which === 13) { // Mã ASCII của phím Enter
+          event.preventDefault(); // Ngăn việc thực hiện hành động mặc định của Enter (thường là gửi biểu mẫu)
+          const text = $("#text-enter").val().trim(); // Lấy nội dung và loại bỏ khoảng trắng đầu và cuối
+          if (text !== '') {
+            const yourTextContainer = $('.your-text').last();
+            const newMessage = document.createElement('div');
+            newMessage.innerHTML = `<p>${text}</p>`;
+            yourTextContainer.append(newMessage);
+            $("#text-enter").val(''); // Xóa nội dung của vùng nhập liệu
+            $("#text-enter").focus();
+            scrollToBottom();
+          }
+        }
+      });
     })
     // Sự kiện click bên ngoài "menu-nof"
     $(document).click((event) => {
@@ -100,21 +122,21 @@ window.onload = function () {
         $(".theme").fadeOut('fast');
       }
     });
-    $(document).ready(function() {
+    $(document).ready(function () {
       checkFooterVisibility(); // Kiểm tra lần đầu khi tải trang
-      
-      $(window).on('resize', function() {
-          checkFooterVisibility(); // Kiểm tra lại khi cửa sổ được thay đổi kích thước
+
+      $(window).on('resize', function () {
+        checkFooterVisibility(); // Kiểm tra lại khi cửa sổ được thay đổi kích thước
       });
-      
+
       function checkFooterVisibility() {
-          if (window.innerWidth < 1000) {
-              $('footer').hide(); // Sử dụng hàm hide() để ẩn footer
-          } else {
-              $('footer').show(); // Sử dụng hàm show() để hiển thị footer
-          }
+        if (window.innerWidth < 1000) {
+          $('footer').hide(); // Sử dụng hàm hide() để ẩn footer
+        } else {
+          $('footer').show(); // Sử dụng hàm show() để hiển thị footer
+        }
       }
-  });
+    });
     $('#theme-toggle').change(() => {
       if ($('#theme-toggle').prop('checked')) {
         $('.content, .news, .create, .users-not-fr,.menuflex,.see-all, .users, .left, .mid, .right, .comment, .img16-9-content, .img4-3-content, .img-square-content , .img-more-content').addClass('border-theme');
@@ -123,7 +145,7 @@ window.onload = function () {
         $('body').addClass('scroll-theme');
         $('.comment .id').addClass('comment-theme');
         $('.upload, .add-fr, .acp-fr').addClass('theme-button');
-        $('body').addClass('dark-theme');
+        $('body, .thongtin').addClass('dark-theme');
         $('.react sup, .react div, .top-inf a').addClass('theme-text');
         $('.post #textarea, #write-comment,#search,.preview').addClass('border-radius');
         $('header, .top-inf').addClass('little-dark-theme');
@@ -132,12 +154,16 @@ window.onload = function () {
         $('.news h5,.news i, .see-all b, footer').addClass('theme-text');
         $('.post').addClass('little-dark-theme');
         $('.feeds').addClass('little-dark-theme');
-        $('.contact, .focus-inf').addClass('little-dark-theme');
+        $('.contact, .focus-inf, .focus-left').addClass('little-dark-theme');
         $('.bg').addClass('bg-theme');
+        $('.img-avt img').addClass('bg-theme');
+        $('.str-me').addClass('bg-theme');
         $('.nav-info').addClass('nav-theme');
       } else {
         $('.nav-info').removeClass('nav-theme');
+        $('.str-me').removeClass('bg-theme');
         $('.bg').removeClass('bg-theme');
+        $('.img-avt img').removeClass('bg-theme');
         $('.content, .news, .create, .users-not-fr,.menuflex, .users,.see-all, .comment, .img16-9-content, .img4-3-content, .img-square-content ,.left, .mid, .right, .img-more-content').removeClass('border-theme');
         $('.user, .user-chat, .content-nof, .user-top').removeClass('user-theme');
         $('.comment .id').removeClass('comment-theme');
@@ -146,8 +172,8 @@ window.onload = function () {
         $('.feeds a').removeClass('theme-text');
         $('.react sup, .react div, footer').removeClass('theme-text');
         $('.post #textarea, #write-comment,#search,.preview').removeClass('border-radius');
-        $('header, .top-inf, .focus-inf').removeClass('little-dark-theme');
-        $('body').removeClass('dark-theme');
+        $('header, .top-inf, .focus-inf, .focus-left').removeClass('little-dark-theme');
+        $('body, .thongtin').removeClass('dark-theme');
         $('.news p').removeClass('theme-text');
         $('.news h5,.news i, .see-all b, .top-inf a').removeClass('theme-text');
         $('.table,.sub-nof, .menu-nof, .sub-chat,.dropdown-menu').removeClass('little-dark-theme');
