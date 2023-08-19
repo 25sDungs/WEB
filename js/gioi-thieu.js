@@ -27,7 +27,9 @@ $(window).scroll(function () {
   let scrollTop = $(window).scrollTop();
   if (scrollTop > 160) {
     $('.nav').addClass("fixed");
+    $('.right').addClass("display-none");
   } else {
     $(".nav").removeClass("fixed");
+    $('.right').removeClass("display-none");
   }
 }) 

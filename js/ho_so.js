@@ -113,8 +113,10 @@ $(document).ready(() => {
 $(window).scroll(function () {
     let scrollTop = $(window).scrollTop();
     if (scrollTop > 160) {
-        $('.nav').addClass("fixed");
+      $('.nav').addClass("fixed");
+      $('.right').addClass("display-none-right");
     } else {
-        $(".nav").removeClass("fixed");
+      $(".nav").removeClass("fixed");
+      $('.right').removeClass("display-none-right");
     }
-}) 
+  }) 
