@@ -151,12 +151,12 @@ p>a {
 }
 
 .fixed {
+  z-index: 100;
   position: fixed;
   margin: 0;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 99;
 }
 
 .map>a:hover {
@@ -186,12 +186,11 @@ iframe.iframe-vid {
 }
 
 @media (max-width: 450px) {
+  .display-none {
+    display: none;
+  }
   .maps {
     width: 95%;
-  }
-
-  ul.menu.right {
-    display: none;
   }
 
   nav {
@@ -216,6 +215,23 @@ iframe.iframe-vid {
     width: 300px !important;
     height: 150px !important;
   }
+
+  .right a {
+    font-size: 11px;
+    width: 80px;
+    height: 1rem;
+    border-radius: 15px;
+    background: linear-gradient(to right bottom, aqua, blue);
+  }
+
+  .right {
+    position: absolute;
+    top: 49px;
+    right: 2px;
+    border-radius: 15px;
+    background: linear-gradient(to right bottom, aqua, blue);
+  }
+
 }
 
 @media (max-width: 280px) {
